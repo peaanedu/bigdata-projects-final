@@ -20,4 +20,39 @@
     <value>binary</value>
   </property>
 
+  <!-- Fix Tez sessionAppId null error -->
+  <property>
+    <name>hive.execution.engine</name>
+    <value>mr</value>
+  </property>
+
+  <!-- Run MapReduce jobs through YARN -->
+  <property>
+    <name>mapreduce.framework.name</name>
+    <value>yarn</value>
+  </property>
+
+  <!-- Hive warehouse path on HDFS -->
+  <property>
+    <name>hive.metastore.warehouse.dir</name>
+    <value>/data/warehouse/sales_analytics</value>
+  </property>
+
+  <!-- Dynamic partition support -->
+  <property>
+    <name>hive.exec.dynamic.partition</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>hive.exec.dynamic.partition.mode</name>
+    <value>nonstrict</value>
+  </property>
+
+  <!-- Reduce strict mode issues for lab/demo -->
+  <property>
+    <name>hive.mapred.mode</name>
+    <value>nonstrict</value>
+  </property>
+
 </configuration>
