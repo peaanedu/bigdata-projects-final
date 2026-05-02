@@ -11,9 +11,9 @@ docker exec namenode hdfs dfs -mkdir -p /tmp/hive
 echo ""Uploading CSV files to NameNode container...""
 
 docker cp datasets/sales_transactions.csv namenode:/tmp/sales_transactions.csv
-docker cp datasets/products.csv namenode:/tmp/products.csv
+docker cp datasets/Products.csv namenode:/tmp/products.csv
 docker cp datasets/categories.csv namenode:/tmp/categories.csv
-docker cp datasets/regions.csv namenode:/tmp/regions.csv
+docker cp datasets/Regions.csv namenode:/tmp/regions.csv
 
 echo "Putting files into HDFS..."
 

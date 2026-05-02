@@ -34,7 +34,7 @@ print(f"Warehouse path: {warehouse_path}")
 sales_df = (
     spark.read.option("header", True)
     .option("inferSchema", True)
-    .csv(f"{base_path}/sales_orders.csv")
+    .csv(f"{base_path}/sales_transactions.csv")
 )
 
 products_df = (
