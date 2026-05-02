@@ -13,7 +13,10 @@ SET hive.vectorized.execution.reduce.enabled=true;
 SET hive.cbo.enable=true;
 SET hive.compute.query.using.stats=true;
 SET hive.stats.fetch.column.stats=true;
-SET hive.stats.fetch.partition.stats=true;
+
+-- ADD THESE
+SET hive.exec.max.dynamic.partitions=1000;
+SET hive.exec.max.dynamic.partitions.pernode=500;
 
 -- =========================================================
 -- 1. DROP RAW TABLES
