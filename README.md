@@ -45,8 +45,8 @@ docker exec -i hive-server beeline -u jdbc:hive2://localhost:10000 -f /scripts/c
     exit
 
     ## 6. Create Hive tables
-    docker cp scripts/create_hive_tables.sql hive-server:/tmp/create_hive_tables.sql
-    docker exec -it hive-server beeline -u jdbc:hive2://localhost:10000 -f /tmp/create_hive_tables.sql
+    docker cp scripts/create_sales_dw_hive.sql hive-server:/tmp/create_sales_dw_hive.sql
+    docker exec -it hive-server beeline -u jdbc:hive2://localhost:10000 -f /tmp/create_sales_dw_hive.sql
 
     ## 7. Test Trino
     docker exec -it trino trino
@@ -85,7 +85,7 @@ docker exec -i hive-server beeline -u jdbc:hive2://localhost:10000 -f /scripts/c
     docker exec namenode hdfs dfs -ls -R /data/warehouse/sales_analytics
 
     10. Create Hive tables:
-        beeline -u jdbc:hive2://localhost:10000 -f /tmp/create_hive_tables.sql
+        beeline -u jdbc:hive2://localhost:10000 -f /tmp/create_sales_dw_hive.sql
 
     11. Run Trino query:
         SELECT region_name, SUM(sales_amount)
