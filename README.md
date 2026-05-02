@@ -93,5 +93,9 @@ docker exec -i hive-server beeline -u jdbc:hive2://localhost:10000 -f /scripts/c
         GROUP BY region_name;
 
     12. Open Power BI dashboard
+    connect to trino
+    <img width="1857" height="1014" alt="image" src="https://github.com/user-attachments/assets/ceb6bd29-d789-4c6c-bdad-dd3f343d1034" />
+    <img width="1157" height="852" alt="image" src="https://github.com/user-attachments/assets/9bee85f5-f874-4df0-b08a-6798de20dc8a" />
+
     13. Explain KPIs and business insights
     14. Conclude with benefits and future improvements
